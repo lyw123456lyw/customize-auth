@@ -1,0 +1,21 @@
+jwt:
+    secret: AGTFVBHDCVHDFDEEEFDSGHGDSFF
+    issuer: marker #发布者
+    subject: userLoginToken #主题
+    audience: FRONT #签名的观众 也可以理解谁接受签名的
+spring:
+    datasource:
+        driver-class-name: com.mysql.cj.jdbc.Driver
+        url: jdbc:mysql://127.0.0.1:3306/sys?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC
+        username: root
+        password: admin123
+    redis:
+        host: localhost
+        port: 6379
+        jedis:
+            pool:
+                max-idle: 5
+                max-active: 8
+                max-wait: -1
+server:
+    port: 8888
